@@ -40,14 +40,14 @@ class Buscador extends Component{
                 <form onSubmit={this.obtenerDatos}>
                 
                 <div className="row">
-                    <div className="form-group col-md-8">
+                    <div className="form-group col-12 col-md-8 col-xl-4">
                         <input type="text" 
                         className="form-control form-control-lg" 
                         onChange={this.updateData}
                         value={this.state.searchImage}
                         placeholder="Busca tu imagen. Ejemplo: Limón"/>
                     </div>
-                    <div className="form-group col-md-4">
+                    <div className="form-group col-12 col-md-4 col-xl-2">
                         <input type="submit" className="btn btn-lg btn-block btn-info"  value="Buscar"/>
                     </ div>
                 </div>
@@ -55,7 +55,7 @@ class Buscador extends Component{
                 <figure>
                     {this.state.imagenes.map(image => {
                         return(
-                            <img src={image.webformatURL} alt={image.user} key= {image.id}/>
+                            <img className='col-12 col-md-4 col-xl-2 img-thumbnail'src={image.webformatURL} alt={image.user} key= {image.id}/>
                         )
                     })}
                 </figure>
